@@ -15,7 +15,7 @@ void print_buffer(char buffer[], int *buff_ind);
 
 int _printf(const char *format, ...)
 {
-	int i;
+	int index;
 	int printed = 0, printed_chars = 0;
 	int buff_ind = 0;
 
@@ -28,11 +28,11 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+	for (index = 0; format[index] != '\0'; index++)
 	{
-		if (format[i] != '%')
+		if (format[index] != '%')
 		{
-			buffer[buff_ind++] = format[i];
+			buffer[buff_ind++] = format[index];
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
 			printed_chars++;
@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 		{
 			print_buffer(buffer, &buff_ind);
 
-			switch (format[++i])
+			switch (format[++index])
 			{
 				case 'c':
 				putchar(va_arg(list, int));
@@ -83,12 +83,12 @@ int _printf(const char *format, ...)
 
 void print_buffer(char buffer[], int *buff_ind)
 {
-	int i;
+	int index;
 
 	if (*buff_ind > 0)
 	{
-		for (i = 0; i < *buff_ind; i++)
-			putchar(buffer[i])
+		for (index = 0; index < *buff_ind; index++)
+			putchar(buffer[index])
 	}
 
 	*buff_ind = 0;
