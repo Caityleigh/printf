@@ -8,7 +8,7 @@
 
 int printInteger(va_list args)
 {
-	int n = va_args(args, int);
+	int n = va_arg(args, int);
 	int number, last = n % 10, digit, exp = 1;
 	int i = 1;
 
@@ -51,7 +51,7 @@ int printInteger(va_list args)
 
 int printDecimal(va_list args)
 {
-	int n =  va_args(args, int);
+	int n =  va_arg(args, int);
 	int number, last = n % 10, digit;
 	int i = 1;
 	int exp = 1;
@@ -76,8 +76,8 @@ int printDecimal(va_list args)
 		while (exp > 0)
 		{
 			digit = number / exp;
-			_putchar(digit + '0')
-				number = number - (digit * exp);
+			_putchar(digit + '0');
+			number = number - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}

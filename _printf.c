@@ -12,7 +12,7 @@ int _printf(const char * const fmt, ...)
 	{"%s", printf_string}, {"%c", printChar},
 	{"%%", printPercent},
 	{"%i", printInteger}, {"%d", printDecimal}, {"%r", print_string_reverse},
-	{"%R", printrot}, {"%b", _printBinary}, {"%u", print_unsigned},
+	{"%R", printrot}, {"%b", printBinary}, {"%u", print_unsigned},
 	{"%o", printOctal}, {"%x", printHexUpperModified}, {"%X", printHexadecimal},
 	{"%S", printExclusiveString}, {"%p", printf_pointer}
 };
@@ -42,7 +42,7 @@ while (fmt[i] != '\0')
 	j--;
 	}
 	_putchar(fmt[i]);
-	lenght++;
+	length++;
 	i++;
 }
 va_end(args);

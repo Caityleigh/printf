@@ -22,7 +22,7 @@ typedef struct format
 
 int const_string_lenghth(const char *str);
 int printHexAux(unsigned long int num);
-int printfBinary(va_list value);
+int printBinary(va_list value);
 int printChar(va_list value);
 int printHexadecimal(va_list value);
 int printHexUpperModified(va_list value);

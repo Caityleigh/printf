@@ -11,7 +11,7 @@ int printrot(va_list args)
 	int i, j, counter = 0;
 	int isFound = 0;
 	char *inputString = va_arg(args, char*);
-	char alphabet[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+	char alphabet[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char rot13[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
 	if (inputString == NULL)

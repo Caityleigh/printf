@@ -23,7 +23,7 @@ int printHexUpperAux(unsigned long int num)
 	arr = malloc(counter * sizeof(int));
 
 	/* extract the digit of the hexadecimal number */
-	for (i = 0; i < counter; i++;)
+	for (i = 0; i < counter; i++)
 	{
 		arr[i] = temp % 16;
 		temp /= 16;

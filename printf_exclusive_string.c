@@ -22,21 +22,21 @@ int printExclusiveString(va_list val)
 		{
 			_putchar('\\'); /* print backslash */
 			_putchar('x'); /* print 'x' */
-			lenght += 2;
+			length += 2;
 			cast = str[i];
 
 			if (cast < 16)
 			{
 				_putchar('0');
-				lenght++;
+				length++;
 			}
 
-			lenght += printHexUpperAux(cast);
+			length += printHexUpperAux(cast);
 		}
 		else
 		{
 			_putchar(str[i]); /*prints the character*/
-			lenght++;
+			length++;
 		}
 	}
 
