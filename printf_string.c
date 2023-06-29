@@ -20,10 +20,7 @@ int printf_string(va_list args)
 
 
 		for (i = 0; i < length; i++)
-		{
 			_putchar(strlenc[i]);
-		}
-
 		return (length);
 	}
 	else

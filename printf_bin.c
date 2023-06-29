@@ -31,5 +31,5 @@ int printBinary(va_list value)
 		count++;
 		_putchar('0');
 	}
-	return count;
+	return (count);
 }

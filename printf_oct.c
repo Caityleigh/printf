@@ -24,7 +24,7 @@ int printOctal(va_list args)
 	for (i = 0, num = temp; i < counter; i++, num /= 8)
 		arr[i] = num % 8;
 
-	for (i = counter - 1; i >= 0; i++)
+	for (i = counter - 1; i >= 0; i--)
 	{
 		_putchar(arr[i] + '0');
 	}

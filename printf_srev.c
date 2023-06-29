@@ -13,19 +13,12 @@ int print_string_reverse(va_list args)
 	int length = 0;
 
 	if (str == NULL)
-	{
 		str = "(null)";
-	}
 
 	while (str[length] != '\0')
-	{
 		length++;
-	}
 
 	for (i = length - 1; i >= 0; i--)
-	{
 		_putchar(str[i]);
-	}
-
 	return (length);
 }
